@@ -1,0 +1,189 @@
+.btn-transparent{
+	background: transparent;
+}
+.lightbox-text-white{
+	color:white;
+}
+.lightbox-modal .modal-dialog {
+	width: 100% !important;
+	height: 100% !important;
+	margin: 0;
+}
+.lightbox-modal .modal-content{
+	width: 100% !important;
+	height: 100% !important;
+	background:transparent;
+	border: 0;
+	box-shadow: none;
+}
+.angular-lightbox-no-padding{
+	padding:0px;
+}
+.angular-lightbox-full-size{
+	height: 100%;
+	width: 100%;
+}
+.angular-lightbox-close-btn-wrapper{
+	position: absolute;
+	margin-bottom: 12px; /* the font-size of .btn-xs */
+	height: 22px;
+	text-align: center;
+	z-index: 2;
+	font-size: 0;
+	right: 0;
+	top:0;
+}
+.angular-lightbox-pre-btn-wrapper{
+	position: absolute;
+	margin-bottom: 12px; /* the font-size of .btn-xs */
+	height: 22px;
+	text-align: center;
+	font-size: 0;
+	z-index: 2;
+	top:50%;
+	left:0;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 34px;
+	padding: 40px 30px;
+}
+@media screen and (max-width: 480px) {
+	.angular-lightbox-pre-btn-wrapper{
+		padding: 30px 13px;
+	}
+}
+.angular-lightboax-next-btn-wrapper {
+	position: absolute;
+	margin-bottom: 12px; /* the font-size of .btn-xs */
+	height: 22px;
+	text-align: center;
+	font-size: 0;
+	z-index: 2;
+	top:50%;
+	right:0;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 34px;
+	padding: 40px 30px;
+}
+@media screen and (max-width: 480px) {
+	.angular-lightboax-next-btn-wrapper{
+		padding: 30px 13px;
+	}
+}
+.pre-btn{
+	border: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 34px;
+	padding: 40px 30px;
+	margin: auto;
+	cursor: pointer;
+	opacity: .7;
+	background: rgba(0,0,0,.2);
+}
+@media screen and (max-width: 480px) {
+	.pre-btn{
+		padding: 30px 13px;
+	}
+}
+.pre-btn svg{
+	left: 0;
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+}
+@media screen and (max-width: 480px) {
+	.pre-btn svg{
+		width: 26px;
+		height: 26px;
+	}
+}
+.next-btn{
+	border: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 34px;
+	padding: 40px 30px;
+	margin: auto;
+	cursor: pointer;
+	opacity: .7;
+	background: rgba(0,0,0,.2);
+}
+@media screen and (max-width: 480px) {
+	.next-btn{
+		padding: 30px 13px;
+	}
+}
+.next-btn svg{
+	right: 0;
+	position: absolute;
+	top:50%;
+	transform: translateY(-50%);
+}
+@media screen and (max-width: 480px) {
+	.next-btn svg{
+		width: 26px;
+		height: 26px;
+	}
+}
+
+.angular-lightbox-view-image-wrapper {
+	position: absolute;
+	margin-bottom: 12px; /* the font-size of .btn-xs */
+	height: 22px;
+	text-align: center;
+	z-index: 2;
+	font-size: 0; /* prevent the otherwise inherited font-size and line-height from adding extra space to the bottom of this div */
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.lightbox-nav .btn-group {
+	vertical-align: top;
+}
+
+.lightbox-nav .close {
+	/* absolutely position this in order to center the nav buttons */
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.lightbox-image-container {
+	position: relative;
+	text-align: center; /* center the image */
+	top:50%;
+	transform: translateY(-50%);
+}
+
+/* the caption overlays the top left corner of the image */
+.lightbox-image-caption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0.5em 0.9em; /* the left and right margins are offset by 0.4em for the span box-shadow */
+	color: #000;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: left;
+	text-shadow: 0.1em 0.1em 0.2em rgba(255, 255, 255, 0.5);
+}
+
+.lightbox-image-caption span {
+	padding-top: 0.1em;
+	padding-bottom: 0.1em;
+	background-color: rgba(255, 255, 255, 0.75);
+	/* pad the left and right of each line of text */
+	box-shadow: 0.4em 0 0 rgba(255, 255, 255, 0.75),
+	-0.4em 0 0 rgba(255, 255, 255, 0.75);
+}
+.angular-lightbox-shadow{
+	-webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	box-shadow: 0 5px 15px rgba(0,0,0,.5);
+
+}

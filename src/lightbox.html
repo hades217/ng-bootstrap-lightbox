@@ -1,0 +1,50 @@
+
+<div class="angular-lightbox-close-btn-wrapper">
+	<button class="close" aria-hidden="true" ng-click="$dismiss()">×</button>
+</div>
+<div class="angular-lightbox-pre-btn-wrapper" ng-if="Lightbox.images.length > 1">
+	<a class="pre-btn"  ng-click="Lightbox.prevImage()">
+		<svg enable-background="new 0 0 256 256" height="56px" id="Layer_1" version="1.1" viewBox="0 0 256 256" width="56px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#fff" d="M179.199,38.399c0,1.637-0.625,3.274-1.875,4.524l-85.076,85.075l85.076,85.075c2.5,2.5,2.5,6.55,0,9.05s-6.55,2.5-9.05,0  l-89.601-89.6c-2.5-2.5-2.5-6.551,0-9.051l89.601-89.6c2.5-2.5,6.55-2.5,9.05,0C178.574,35.124,179.199,36.762,179.199,38.399z"/></svg>
+	</a>
+</div>
+<div class="angular-lightboax-next-btn-wrapper" ng-if="Lightbox.images.length > 1">
+	<a class="next-btn" ng-click="Lightbox.nextImage()">
+		<svg enable-background="new 0 0 256 256" height="56px" id="Layer_1" version="1.1" viewBox="0 0 256 256" width="56px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#fff" d="M76.8,217.6c0-1.637,0.625-3.274,1.875-4.524L163.75,128L78.675,42.925c-2.5-2.5-2.5-6.55,0-9.05s6.55-2.5,9.05,0  l89.601,89.6c2.5,2.5,2.5,6.551,0,9.051l-89.601,89.6c-2.5,2.5-6.55,2.5-9.05,0C77.425,220.875,76.8,219.237,76.8,217.6z"/></svg>
+	</a>
+</div>
+
+<!-- <div class="angular-lightbox-view-image-wrapper" ng-if="Lightbox.images.length > 1">
+	<a ng-href="{{Lightbox.imageUrl}}" target="_blank" class="btn-transparent lightbox-text-white" title="Open in new tab">Open image in new tab
+	</a>
+
+</div> -->
+
+<div class="modal-body angular-lightbox-no-padding angular-lightbox-full-size" ng-swipe-left="Lightbox.nextImage()" ng-swipe-right="Lightbox.prevImage()">
+	<div class="lightbox-image-container">
+
+
+		<!-- image -->
+		<img ng-if="!Lightbox.isVideo(Lightbox.image)" lightbox-src="{{Lightbox.imageUrl}}" class="angular-lightbox-shadow">
+
+		<!-- video -->
+		<div ng-if="Lightbox.isVideo(Lightbox.image)" class="embed-responsive embed-responsive-16by9">
+			<!-- video file embedded directly -->
+			<video ng-if="!Lightbox.isSharedVideo(Lightbox.image)"
+			lightbox-src="{{Lightbox.imageUrl}}"
+			controls
+			autoplay="true" class="angular-lightbox-shadow">
+		</video>
+
+		<!-- video embedded with an external service using
+		`ng-videosharing-embed` -->
+		<embed-video ng-if="Lightbox.isSharedVideo(Lightbox.image)"  lightbox-src="{{Lightbox.imageUrl}}"  ng-href="{{Lightbox.imageUrl}}" iframe-id="lightbox-video" class="embed-responsive-item angular-lightbox-shadow">
+			<a ng-href="{{Lightbox.imageUrl}}">Watch video</a>
+		</embed-video>
+		<!-- caption -->
+		<div class="lightbox-image-caption">
+			{{Lightbox.imageCaption}}
+		</div>
+
+	</div>
+</div>
+</div>
